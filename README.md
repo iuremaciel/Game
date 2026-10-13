@@ -38,3 +38,12 @@ O projeto não inclui ainda a pasta nativa `android/` porque ela é criada pelo 
 
 ## Observação importante
 Esta é uma primeira versão jogável e expansível. Os mapas são ilustrações SVG geradas pelo próprio projeto, não imagens finais desenhadas à mão. O conteúdo, a lógica de fases e os objetos podem ser refinados em iterações futuras.
+
+## Gerar APK pelo GitHub Actions
+
+1. Envie o conteúdo desta pasta para a raiz do seu repositório GitHub (incluindo a pasta oculta `.github`).
+2. Abra a aba **Actions** do repositório e habilite os workflows, se o GitHub solicitar.
+3. Selecione **Gerar APK Android** e toque em **Run workflow**. Um envio para a branch `main` ou `master` também inicia a compilação.
+4. Quando terminar com sucesso, abra a execução e baixe o artefato **objetos-escondidos-apk-debug**. Dentro dele estará `app-debug.apk`.
+
+Este workflow gera um APK de depuração para testes, não um APK assinado para publicação na Play Store. O workflow cria a pasta Android durante a compilação; não é necessário enviar uma pasta `android` pronta.
